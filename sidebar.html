@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>sidebar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       *{
+        margin: 0;
+        padding: 0;
+        font-family: cursive;
+        box-sizing: border-box;
+       }
+       body{
+        min-height: 100vh;
+        background-color: #d2d2d2;
+       }
+       .sidebar-header img{
+        width: 52px;
+        border-radius: 50%;
+       }
+       .sidebar-header{
+        display: flex;
+        align-items: center;
+       }
+       .sidebar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 85px;
+        background: #333;
+        padding: 25px 25px;
+        transition: all 0.5s ease;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+       }
+
+       .sidebar:hover{
+        width: 260px;
+       }
+
+
+       .sidebar-header h2{
+        font-size: 30px;
+        font-weight: 60;
+        color: #d2d2d2;
+        margin-left: 15px;
+       }
+       .sidebar-links h4{
+        color: #fff;
+        font-weight: 25;
+        margin-left: 23px;
+        white-space: nowrap;
+        position: relative;
+       }
+
+       .sidebar-links .menu-separator{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: 1px;
+        transform: scaleX(1);
+        transform: translateY(-50%);
+        background: #333578;
+        transform-origin: right;
+        transition-duration: 0.2s;
+       }
+
+       .sidebar:hover .sidebar-links .menu-separator{
+        transition-delay: 0s;
+        transform: scaleX(0);
+       }
+       
+       .sidebar-links li a{
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        font-size: 20px;
+        padding: 10px 10px;
+        letter-spacing: 0.5px;
+        gap: 0 15px;
+       }
+       .sidebar-links {
+        list-style: none;
+        margin-top: 10px;
+        height: 80%;
+        overflow-y: auto;
+        scrollbar-width: none;
+       }
+
+       .sidebar-links h4 span{
+        opacity: 0;
+       }
+
+       .sidebar:hover .sidebar-links h4 span{
+        opacity: 1;
+       }
+
+       .sidebar-links li a:hover{
+        background: #ffffff2d;
+        border-radius: 40px;
+        color: #fff;
+       }
+    .user-account{
+        margin-top: auto;
+        padding: 12px 10px;
+        margin-left: -10px;
+    }
+    .user-account .user-profile{
+        display: flex;
+        align-items: center;
+        color: #fff;
+    }
+    .user-profile img {
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+    }
+    .user-profile h3{
+       font-size: 25px;
+       font-weight: 50;
+    }
+    .user-profile span{
+        font-size: 1rem;
+        display: block;
+        margin-top: 0;
+    }
+    .user-detail{
+        margin-left: 10px;
+    }
+    .user-profile img:hover{
+        
+    }
+
+    .sidebar:hover .user-account{
+        background: #ffffff2d;
+        border-radius: 4px;
+    }
+
+    </style>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="download.jfif" alt="">
+            <h2>CodingLab</h2>
+        </div>
+        <ul class="sidebar-links">
+            <h4><span>Main menu</span></h4>
+            <div class="menu-separator"></div>
+            <li>
+                <a href="#"><i class="fa-etch fa-solid fa-bars"></i>Dasboard</a>
+            
+            </li>
+            <li>
+                <a href="#"><i class="fa-etch fa-solid fa-bars"></i>Overview</a>
+            
+            </li>
+            
+            <li>
+                <a href="#"><i class="fa-etch fa-solid fa-bars"></i>Analytic</a>
+            
+            </li>
+            
+            <li>
+                <a href="#"><i class="fa-etch fa-solid fa-bars"></i>Project</a>
+            
+            </li>
+            
+            <h4><span>  </span></h4>
+            <li>
+                <a href="#"><i class="fa-regular fa-user-group"></i>Groups</a>
+            
+            </li>
+            <li>
+                <a href="#"><i class="fa-etch fa-solid fa-bars"></i>Transfor</a>
+            
+            </li>
+            <li>
+                <a href="#"><i class="fa-sharp-duotone fa-light fa-chart-mixed"></i>All Reports</a>
+            
+            </li>
+            
+            <li>
+                <a href="#"><i class="fa-solid fa-bell"></i>Notifications</a>
+            
+            </li>
+            <li>
+                <a href="#">Profile</a>
+            
+            </li>
+            <li>
+                <a href="#"><i class="fa-sharp-duotone fa-solid fa-circle-ellipsis"></i>Setting</a>
+            
+            </li>
+            <li>
+                <a href="#"><i class="fa-regular fa-arrow-left-from-bracket"></i>LogOut</a>
+            
+            </li>
+        </ul>
+
+        <div class="user-account">
+            <div class="user-profile">
+                <img src="kaif pic.jpg" alt="">
+                <div class="user-detail">
+                    <h3>Eva Murphy</h3>
+                    <span>Web developer</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+</body>
+</html>
