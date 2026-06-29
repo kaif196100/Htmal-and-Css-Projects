@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SearchBar</title>
+    <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #090d16;
+        }
+        .input-group{
+            position: relative;
+            width: 320px;
+        }
+        .input{
+            width: 100%;
+            padding: 16px;
+            font-size: 16px;
+            color: #ffffff;
+            background: #111827;
+            border: 3px solid #374151;
+            border-radius: 8px;
+            outline: none;
+            box-sizing: border-box;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .input:focus{
+            border-color: #6366f1;
+            box-shadow: 0 15px 25px rgba(99, 102, 241, 0.3);
+        }
+        .label{
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #111827;
+            padding: 0 6px;
+            color: #9ca3f3;
+            font-size: 18px;
+            pointer-events: none;
+            transition: transform 0.2s ease, top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+        }
+        .input:focus ~ .label, 
+        .input:not(:placeholder-shown) ~ .label{
+            top: 0;
+            font-size: 12px;
+            color: #6366f1;
+            transform: translateY(-50%);
+            letter-spacing: 1px;
+            color: #ffffff;
+            background-color: #111827;
+        }
+        .input:not(:focus):not(:placeholder-shown) ~ .label{
+            color: #9ca3f1;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="input-group">
+        <input type="text" id="username" class="input" placeholder="">
+        <label for="username" class="label">UserName</label>
+    </div>
+    
+</body>
+</html>
